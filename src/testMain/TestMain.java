@@ -40,7 +40,7 @@ public class TestMain{
 			String sqlSelect = "select * from buchung";
 			res = db.createDerbyStatement().executeQuery(sqlSelect);
 
-			// lieﬂt alles was in der Tablle Konto in der Spalte Kontoid drin ist aus
+			// lieﬂt alles was in der Tablle Konto i n der Spalte Kontoid drin ist aus
 			
 				List<Buchung> buchungen = new ArrayList<>();
 				

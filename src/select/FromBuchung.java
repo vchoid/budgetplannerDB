@@ -1,5 +1,12 @@
 package select;
 
-public class FromBuchung {
 
+import dbConnection.ConnectToBudgetPlanerDB;
+
+
+
+public class FromBuchung extends ConnectToBudgetPlanerDB{
+
+	
+	
 }
