@@ -12,7 +12,8 @@ public class Buchung {
 	private String verwendungszweck;
 	private double betrag;
 	private Date buchungsDatum = new Date();
-	private Date erfassungsDatum = new Date();
+	private Date erstellungsDatum = new Date();
+	private Date aenderungsDatum = new Date();
 	private Konto konto = new Konto();
 	private Kategorie kategorie = new Kategorie();
 	private Status status = new Status();
@@ -20,18 +21,35 @@ public class Buchung {
 	
 
 	public Buchung(int buchungsID, int transferR, String verwendungszweck, double betrag, Date buchungsDatum,
-			Date erfassungsDatum, int konto, int kategorie, int status, int turnus) {
+			Date erstellungsDatum, Date aenderungsDatum, int konto, int kategorie, int status, int turnus) {
 		super();
 		this.buchungsID = buchungsID;
 		this.transferR.setTransID(transferR);
 		this.verwendungszweck = verwendungszweck;
 		this.betrag = betrag;
 		this.buchungsDatum = buchungsDatum;
-		this.erfassungsDatum = erfassungsDatum;
+		this.erstellungsDatum = erstellungsDatum;
+		this.aenderungsDatum = erstellungsDatum;
 		this.konto.setKontoID(konto);
 		this.kategorie.setKatID(kategorie);;
 		this.status.setStatusID(status);
 		this.turnus.setTurnusID(turnus);
+	}
+
+	public int getBuchungsID() {
+		return buchungsID;
+	}
+
+	public void setBuchungsID(int buchungsID) {
+		this.buchungsID = buchungsID;
+	}
+
+	public Transferrichtung getTransferR() {
+		return transferR;
+	}
+
+	public void setTransferR(Transferrichtung transferR) {
+		this.transferR = transferR;
 	}
 
 	public String getVerwendungszweck() {
@@ -58,13 +76,20 @@ public class Buchung {
 		this.buchungsDatum = buchungsDatum;
 	}
 
-	
-	public Transferrichtung getTransferR() {
-		return transferR;
+	public Date getErstellungsDatum() {
+		return erstellungsDatum;
 	}
 
-	public void setTransferR(Transferrichtung transferR) {
-		this.transferR = transferR;
+	public void setErstellungsDatum(Date erstellungsDatum) {
+		this.erstellungsDatum = erstellungsDatum;
+	}
+
+	public Date getAenderungsDatum() {
+		return aenderungsDatum;
+	}
+
+	public void setAenderungsDatum(Date aenderungsDatum) {
+		this.aenderungsDatum = aenderungsDatum;
 	}
 
 	public Konto getKonto() {
@@ -97,22 +122,6 @@ public class Buchung {
 
 	public void setTurnus(Turnus turnus) {
 		this.turnus = turnus;
-	}
-
-	public void setBuchungsID(int buchungsID) {
-		this.buchungsID = buchungsID;
-	}
-
-	public void setErfassungsDatum(Date erfassungsDatum) {
-		this.erfassungsDatum = erfassungsDatum;
-	}
-
-	public int getBuchungsID() {
-		return buchungsID;
-	}
-
-	public Date getErfassungsDatum() {
-		return erfassungsDatum;
 	}
 
 	public void changeBuchung() {

@@ -1,4 +1,4 @@
-package select;
+package view;
 
 public interface IfromTurnus {
 
