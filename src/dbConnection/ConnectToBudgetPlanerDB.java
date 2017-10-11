@@ -8,7 +8,6 @@ import java.sql.Statement;
 public class ConnectToBudgetPlanerDB{
 	
 	
-	
 	public ConnectToBudgetPlanerDB(){
 		try {
 			createDerbyStatement();

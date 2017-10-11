@@ -19,7 +19,10 @@ public class Buchung {
 	private Status status = new Status();
 	private Turnus turnus = new Turnus();
 	
-
+	public Buchung(double betrag){
+		super();
+		this.betrag = betrag;
+	}
 	public Buchung(int buchungsID, int transferR, String verwendungszweck, double betrag, Date buchungsDatum,
 			Date erstellungsDatum, Date aenderungsDatum, int konto, int kategorie, int status, int turnus) {
 		super();
