@@ -10,16 +10,13 @@ import java.util.List;
 import db.Buchung;
 import dbConnection.ConnectToBudgetPlanerDB;
 
-
-
 public class TestMain{
 
 	public static void main(String[] args) {
 		try {
 			
 			ConnectToBudgetPlanerDB db = new ConnectToBudgetPlanerDB();
-			
-			
+						
 			// Statement
 //			stmt = connect.createStatement();
 			// Statement ausführen
@@ -32,7 +29,7 @@ public class TestMain{
 //			stmt.executeUpdate(sqlInsertInto);
 			
 			
-// ließt alles was in der Tablle Konto i n der Spalte Kontoid drin ist aus
+// ließt alles was in der Tablle Konto in der Spalte Kontoid drin ist aus
 // TODO ############################################### in  Klasse Buchung ##########################################################
 			List<Buchung> buchungen = retrieveAllBuchungen(db);
 //#################################################################################################################################				
@@ -43,8 +40,7 @@ public class TestMain{
 				List<Buchung> ausgaben = sumAll(db);
 				Buchung ausgabe = ausgaben.get(0);
 				System.out.println("Summe aller Ausgaben: " + ausgabe.getBetrag() + " EURO");
-				
-				
+								
 				db.createDerbyStatement().close();
 		
 		} catch (SQLException e) {
